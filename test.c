@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
-    char str[20];
-    scanf("%10[1234567890]",str);
+    double a = 0;
 
-    printf("%s\n",str);
-    return 0;
+    double b = pow(a,2);
+
+    printf("%lf\n", b);
 }

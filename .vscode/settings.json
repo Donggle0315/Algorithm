@@ -66,5 +66,22 @@
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp"
-    }
+    },
+    "python.REPL.enableREPLSmartSend": false,
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "aws-v4-rds.cloa4woy4bzo.us-east-1.rds.amazonaws.com",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "aws-v4-mariadb",
+            "database": "mysql",
+            "username": "metacoding",
+            "password": "metacoding1234"
+        }
+    ]
 }
