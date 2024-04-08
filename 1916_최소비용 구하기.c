@@ -57,3 +57,40 @@ void finish() {
 	free(visited);
 	free(distance);
 }
+
+
+
+
+void dijkstra(int start) {
+	int i,j, current;
+	for (i = 1; i <= n; i++) {
+		distance[i] = list[start][i];
+	}
+	visited[start] = 1;
+	for (i = 1; i <= n - 2; i++) {
+		current = getMinIndex();
+		visited[current] = 1;
+		for (j = 1; j <= n; j++) {
+			if (visited[j] == 0) {
+				if (distance[current] + list[current][j] < distance[j]) {
+					distance[j] = distance[current] + list[current][j];
+				}
+			}
+		}
+	}
+}
+
+int getMinIndex() {
+	int min=-1, index = 0,i;
+	for (i = 1; i <= n; i++) {
+		if (min == -1&&visited[i]==0) {
+			min = distance[i];
+			index = i;
+		}
+		if (min > distance[i] && visited[i] == 0) {
+			min = distance[i];
+			index = i;
+		}
+	}
+	return index;
+}
