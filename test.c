@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main() {
-    double a = 0;
+    double a = 3;
 
     double b = pow(a,2);
 
