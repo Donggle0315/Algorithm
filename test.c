@@ -2,9 +2,12 @@
 #include <math.h>
 
 int main() {
-    double a = 3;
+    FILE *inPt = fopen("temp.txt", "r");
+    char ch;
+    while ((ch = fgetc(inPt)) != EOF) {
+        printf("%c\n",ch);
+    }
 
-    double b = pow(a,2);
+    return 0;
 
-    printf("%lf\n", b);
 }
